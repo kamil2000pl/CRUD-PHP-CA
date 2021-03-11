@@ -6,4 +6,4 @@
 
 <!-- the body section -->
 <body>
-<header><h1>Keyboard Shop</h1></header>
+<header><h1><a href='index.php'>Keyboard Shop</a></h1></header>

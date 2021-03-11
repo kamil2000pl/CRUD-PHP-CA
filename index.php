@@ -41,11 +41,10 @@ $statement3->execute();
 $records = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
-<div class="container">
-    <?php
+<?php
     include('includes/header.php');
     ?>
-    <h1>Record List</h1>
+<div class="container">
 
     <aside>
         <!-- display a list of categories -->
