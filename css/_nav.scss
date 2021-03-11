@@ -11,7 +11,7 @@ nav ul li {
     list-style-type: none;
     display: inline-block;
     text-decoration: none;
-    width: 100px;
+    color: black;
 }
 
 nav ul li a {
@@ -20,6 +20,7 @@ nav ul li a {
     border: 3px $navcolour solid;
     border-radius: 7px;;
     padding: 10px;
+    color: black;
 }
 
 nav ul li a:hover {
