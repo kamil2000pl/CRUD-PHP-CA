@@ -1,4 +1,40 @@
+$deleteeditcolor: #66ff66;
+$deleteeditcolorhover: #33cc33;
+
 table {
     border: 1px solid black;
     border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border-bottom: 1px gray solid;
+    text-align: center;
+}
+
+td {
+    font-size: 30px;
+    line-height: 10px;
+}
+
+.deleteedit {
+    background-color: $deleteeditcolor;
+    border: 2px $deleteeditcolor solid;
+    border-radius: 4px;
+    padding:10px;
+}
+
+.deleteedit:hover {
+    background-color: $deleteeditcolorhover;
+    border: 2px $deleteeditcolorhover solid;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+#imgtd {
+    width: 30%;
 }

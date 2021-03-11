@@ -1,0 +1,28 @@
+#add_category_button {
+    background-color: $deleteeditcolor;
+    border: 2px $deleteeditcolor solid;
+    border-radius: 4px;
+}
+
+#add_category_button:hover {
+    background-color: $deleteeditcolorhover;
+    border: 2px $deleteeditcolorhover solid;
+    cursor: pointer;
+}
+
+#delete_button {
+    background-color: $deleteeditcolor;
+    border: 2px $deleteeditcolor solid;
+    border-radius: 4px;
+    padding:10px;
+}
+
+#delete_button:hover {
+    background-color: $deleteeditcolorhover;
+    border: 2px $deleteeditcolorhover solid;
+    cursor: pointer;
+}
+
+#category_table td {
+    height: 60px;
+}

@@ -1,0 +1,25 @@
+$buttoncolor: #00ff99;
+$buttoncolorhover: #00cc66;
+
+
+#deleteaddbuttons {
+    margin: 30px 0 5px 0;
+}
+
+#deleteaddbuttons p {
+    display: inline-block;
+}
+
+#deleteaddbuttons p a {
+    text-decoration: none;
+    background-color: $buttoncolor;
+    border: 3px $buttoncolor solid;
+    border-radius: 7px;;
+    padding: 10px;
+}
+
+#deleteaddbuttons p a:hover {
+    background-color: $buttoncolorhover;
+    border: 3px $buttoncolorhover solid;
+}
+

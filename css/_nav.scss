@@ -1,3 +1,28 @@
+$navcolour: #ccff33;
+$navcolourhover: #99ff33;
+
 nav {
     width:50%;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    text-decoration: none;
+    width: 100px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    background-color: $navcolour;
+    border: 3px $navcolour solid;
+    border-radius: 7px;;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: $navcolourhover;
+    border: 3px $navcolourhover solid;
 }

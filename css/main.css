@@ -21,6 +21,11 @@ body {
   padding: .5em 2em;
 }
 
+#categories {
+  width: 10%;
+  display: inline-block;
+}
+
 header {
   font-family: 'Roboto', sans-serif;
   text-align: left;
@@ -39,9 +44,167 @@ header a:hover {
 table {
   border: 1px solid black;
   border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border-bottom: 1px gray solid;
+  text-align: center;
+}
+
+td {
+  font-size: 30px;
+  line-height: 10px;
+}
+
+.deleteedit {
+  background-color: #66ff66;
+  border: 2px #66ff66 solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.deleteedit:hover {
+  background-color: #33cc33;
+  border: 2px #33cc33 solid;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#imgtd {
+  width: 30%;
 }
 
 nav {
   width: 50%;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  text-decoration: none;
+  width: 100px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background-color: #ccff33;
+  border: 3px #ccff33 solid;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #99ff33;
+  border: 3px #99ff33 solid;
+}
+
+#deleteaddbuttons {
+  margin: 30px 0 5px 0;
+}
+
+#deleteaddbuttons p {
+  display: inline-block;
+}
+
+#deleteaddbuttons p a {
+  text-decoration: none;
+  background-color: #00ff99;
+  border: 3px #00ff99 solid;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+#deleteaddbuttons p a:hover {
+  background-color: #00cc66;
+  border: 3px #00cc66 solid;
+}
+
+.editrow {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.col-25 {
+  float: left;
+  width: 15%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+.submitbutton {
+  background-color: #66ff66;
+  border: 2px #66ff66 solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.submitbutton:hover {
+  background-color: #33cc33;
+  border: 2px #33cc33 solid;
+  cursor: pointer;
+}
+
+.addrow {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.col-25 {
+  float: left;
+  width: 15%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+}
+
+#addfields {
+  height: 200px;
+}
+
+#add_category_button {
+  background-color: #66ff66;
+  border: 2px #66ff66 solid;
+  border-radius: 4px;
+}
+
+#add_category_button:hover {
+  background-color: #33cc33;
+  border: 2px #33cc33 solid;
+  cursor: pointer;
+}
+
+#delete_button {
+  background-color: #66ff66;
+  border: 2px #66ff66 solid;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#delete_button:hover {
+  background-color: #33cc33;
+  border: 2px #33cc33 solid;
+  cursor: pointer;
+}
+
+#category_table td {
+  height: 60px;
 }
 /*# sourceMappingURL=main.css.map */

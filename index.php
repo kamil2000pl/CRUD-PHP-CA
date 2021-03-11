@@ -48,7 +48,7 @@ $statement3->closeCursor();
 
     <aside>
         <!-- display a list of categories -->
-        <h2>Categories</h2>
+        <h2 id='categories'>Categories</h2>
         <nav>
             <ul>
                 <?php foreach ($categories as $category) : ?>
@@ -80,7 +80,7 @@ $statement3->closeCursor();
             </tr>
             <?php foreach ($records as $record) : ?>
                 <tr>
-                    <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
+                    <td id='imgtd'><img src="image_uploads/<?php echo $record['image']; ?>"  /></td>
                     <td><?php echo $record['name']; ?></td>
                     <td class="right"><?php echo $record['price']; ?></td>
                     <?php
@@ -94,21 +94,23 @@ $statement3->closeCursor();
                         <form action="delete_record.php" method="post" id="delete_record_form">
                             <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-                            <input type="submit" value="Delete">
+                            <input class="deleteedit" type="submit" value="Delete">
                         </form>
                     </td>
                     <td>
                         <form action="edit_record_form.php" method="post" id="delete_record_form">
                             <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-                            <input type="submit" value="Edit">
+                            <input class="deleteedit" type="submit" value="Edit">
                         </form>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </table>
-        <p><a href="add_record_form.php">Add Record</a></p>
-        <p><a href="category_list.php">Manage Categories</a></p>
+        <div id='deleteaddbuttons'>
+            <p><a href="add_record_form.php">Add Record</a></p>
+            <p><a href="category_list.php">Manage Categories</a></p>
+        </div>
     </section>
     <?php
     include('includes/footer.php');
