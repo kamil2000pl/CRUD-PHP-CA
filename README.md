@@ -1,8 +1,9 @@
-# students-php-crud
-A starter project for DkIT students on the Server-Side module.
-### Instructions
-* Create a MySQL database called php-crud in PHP MyAdmin
-* Run the code in the sql-db.txt file in PHP MyAdmin
+# PHP CA2 CRUD Application
+### By Kamil Jozefowicz
+This is my CA2 submission for Server-Side Development
+## How to setup
+* Install and run XAMPP
+* Import the keyboard_shop.sql file in PHP MyAdmin
 * Move the PHP files in to your htdocs folder so Apache can process the PHP code
-* Configure the database.php file to connect to your SQL database
+* Configure the database.php file to connect to your SQL database, if you use a MAC, you will need to change the password to 'root'
 
