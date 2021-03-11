@@ -4,6 +4,7 @@
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $name = filter_input(INPUT_POST, 'name');
 $price = filter_input(INPUT_POST, 'price', FILTER_VALIDATE_FLOAT);
+$switch_type = filter_input(INPUT_POST, 'switch_type');
 
 // Validate inputs
 if ($category_id == null || $category_id == false ||
@@ -63,13 +64,14 @@ if ($category_id == null || $category_id == false ||
 
     // Add the product to the database 
     $query = "INSERT INTO records
-                 (categoryID, name, price, image)
+                 (categoryID, name, price, switch_type, image)
               VALUES
-                 (:category_id, :name, :price, :image)";
+                 (:category_id, :name, :price, :switch, :image)";
     $statement = $db->prepare($query);
     $statement->bindValue(':category_id', $category_id);
     $statement->bindValue(':name', $name);
     $statement->bindValue(':price', $price);
+    $statement->bindValue(':switch', $switch_type);
     $statement->bindValue(':image', $image);
     $statement->execute();
     $statement->closeCursor();

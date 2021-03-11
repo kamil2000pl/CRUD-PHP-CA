@@ -38,6 +38,16 @@ include('includes/header.php');
                    value="<?php echo $records['price']; ?>">
             <br>
 
+            <?php
+            if ($records['categoryID'] == 1)
+            {
+              echo '<label>Switch Type:</label>';
+              echo '<input type="input" name="switch_type"';
+              echo       'value="'; echo $records['switch_type']; echo '">';
+              echo '<br>';
+            }
+            ?>
+
             <label>Image:</label>
             <input type="file" name="image" accept="image/*" />
             <br>            
