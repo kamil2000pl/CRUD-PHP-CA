@@ -115,3 +115,5 @@ $statement3->closeCursor();
     <?php
     include('includes/footer.php');
     ?>
+<script src="validation.js"></script>
+    

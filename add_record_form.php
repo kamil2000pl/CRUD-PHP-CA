@@ -19,7 +19,7 @@ $selected_keyboard = true;
                                                             echo '<label>Switch Type:</label>';
                                                             echo '</div>';
                                                             echo '<div class="col-75">';
-                                                            echo '<input type="input" name="switch_type">';
+                                                            echo '<input type="input" name="switch_type" id="switch" onBlur="switch_validation();"><span id="switch_err"></span>';
                                                             echo '</div>';
                                                             echo '<br>';
                                                             echo '</div>';
@@ -37,20 +37,19 @@ include('includes/header.php');
     <h1>Add Record</h1>
     <div id="addfields">
         <form action="add_record.php" method="post" enctype="multipart/form-data" id="add_record_form">
-
             <div class='addrow'>
                 <div class='col-25'>
                     <label>Category:</label>
                 </div>
                 <div class='col-75'>
-                    <select id="category_select" name="category_id" onchange="onSelectionChange()">
+                    <select id="category_select" name="category_id" onchange="onSelectionChange()" onBlur="category_validation();">
                         <option value="" selected disabled hidden>Choose here</option>
                         <?php foreach ($categories as $category) : ?>
                             <option value="<?php echo $category['categoryID']; ?>">
                                 <?php echo $category['categoryName']; ?>
                             </option>
                         <?php endforeach; ?>
-                    </select>
+                    </select><span id="category_select_err"></span>
                 </div>
                 <br>
             </div>
@@ -60,7 +59,7 @@ include('includes/header.php');
                     <label>Name:</label>
                 </div>
                 <div class='col-75'>
-                    <input type="input" name="name">
+                    <input type="input" name="name" id="name" onBlur="name_validation();"><span id="name_err"></span>
                 </div>
                 <br>
             </div>
@@ -70,7 +69,7 @@ include('includes/header.php');
                     <label>List Price:</label>
                 </div>
                 <div class='col-75'>
-                    <input type="input" name="price">
+                    <input type="input" name="price" id="price" onBlur="price_validation();"><span id="price_err"></span>
                 </div>
                 <br>
             </div>
@@ -96,3 +95,4 @@ include('includes/header.php');
     <?php
     include('includes/footer.php');
     ?>
+    <script src="validation.js"></script>

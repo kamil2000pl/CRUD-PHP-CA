@@ -43,11 +43,13 @@ include('includes/header.php');
           id="add_category_form">
 
         <label>Name:</label>
-        <input type="input" name="name">
+        <input id="category_name" type="input" name="name" onBlur="category_name_validation();">
         <input id="add_category_button" type="submit" value="Add">
+        <span id="catname_err"></span>
     </form>
     <br>
 
     <?php
 include('includes/footer.php');
 ?>
+<script src="validation.js"></script>
