@@ -4,12 +4,15 @@
 <!-- the head section -->
 <head>
     <title>My Guitar Shop</title>
-    <link rel="stylesheet" type="text/css" href="css/main.scss">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <!-- the body section -->
 <body>
-    <header><h1>Keyboard Shop</h1></header>
+<?php
+    include('includes/header.php');
+    ?>
+<div class="container">
 
     <main>
         <h2 class="top">Error</h2>
@@ -19,5 +22,6 @@
     <footer>
         <p>&copy; <?php echo date("Y"); ?> Kamil Jozefowicz</p>
     </footer>
+</div>
 </body>
 </html>
