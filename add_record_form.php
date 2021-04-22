@@ -19,7 +19,7 @@ $selected_keyboard = true;
                                                             echo '<label>Switch Type:</label>';
                                                             echo '</div>';
                                                             echo '<div class="col-75">';
-                                                            echo '<input type="input" name="switch_type" id="switch" onBlur="switch_validation();"><span id="switch_err"></span>';
+                                                            echo '<input type="input" name="switch_type" id="switch" onBlur="switch_validation();" required><span id="switch_err"></span>';
                                                             echo '</div>';
                                                             echo '<br>';
                                                             echo '</div>';
@@ -59,7 +59,7 @@ include('includes/header.php');
                     <label>Name:</label>
                 </div>
                 <div class='col-75'>
-                    <input type="input" name="name" id="name" onBlur="name_validation();"><span id="name_err"></span>
+                    <input type="input" name="name" id="name" onBlur="name_validation();" required><span id="name_err"></span>
                 </div>
                 <br>
             </div>
@@ -69,7 +69,7 @@ include('includes/header.php');
                     <label>List Price:</label>
                 </div>
                 <div class='col-75'>
-                    <input type="input" name="price" id="price" onBlur="price_validation();"><span id="price_err"></span>
+                    <input type="input" name="price" id="price" onBlur="price_validation();" required><span id="price_err"></span>
                 </div>
                 <br>
             </div>

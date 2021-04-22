@@ -27,7 +27,7 @@ include('includes/header.php');
                                    <label>Category ID:</label>
                             </div>
                             <div class='col-75'>
-                                   <input id="category_select" type="category_id" name="category_id" onBlur="category_validation();" value="<?php echo $records['categoryID']; ?>"><span id="category_select_err"></span>
+                                   <input id="category_select" type="category_id" name="category_id" onBlur="category_validation();" value="<?php echo $records['categoryID']; ?>" required><span id="category_select_err"></span>
                             </div>
                             <br>
                      </div>
@@ -37,7 +37,7 @@ include('includes/header.php');
                                    <label>Name:</label>
                             </div>
                             <div class='col-75'>
-                                   <input type="input" name="name" id="name" onBlur="name_validation();" value="<?php echo $records['name']; ?>"><span id="name_err"></span>
+                                   <input type="input" name="name" id="name" onBlur="name_validation();" value="<?php echo $records['name']; ?> required"><span id="name_err"></span>
                             </div>
                             <br>
                      </div>
@@ -47,7 +47,7 @@ include('includes/header.php');
                                    <label>List Price:</label>
                             </div>
                             <div class='col-75'>
-                                   <input type="input" name="price" id="price" onBlur="price_validation();" value="<?php echo $records['price']; ?>"><span id="price_err"></span>
+                                   <input type="input" name="price" id="price" onBlur="price_validation();" value="<?php echo $records['price']; ?> required"><span id="price_err"></span>
                             </div>
                             <br>
                      </div>
@@ -62,7 +62,7 @@ include('includes/header.php');
                             echo '<input type="input" name="switch_type" id="switch" onBlur="switch_validation();"';
                             echo       'value="';
                             echo $records['switch_type'];
-                            echo '"><span id="switch_err"></span>';
+                            echo '" required><span id="switch_err"></span>';
                             echo '</div>';
                             echo '<br>';
                             echo '</div>';

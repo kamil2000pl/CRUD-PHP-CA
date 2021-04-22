@@ -69,10 +69,7 @@ if(isset($_POST['register'])){
     $result = $stmt->execute();
     
     //If the signup process is successful.
-    if($result){
-        //What you do here is up to you!
-        echo 'Thank you for registering with our website.';
-    }
+    
     
 }
 
@@ -84,13 +81,23 @@ if(isset($_POST['register'])){
         <title>Register</title>
     </head>
     <body>
+    <?php
+    include('includes/header.php');
+    ?>
+        <?php if($result){
+        //What you do here is up to you!
+        echo '<p>Thank you for registering with our website. Please login <a href="login.php">here</a></p>';
+    }?>
         <h1>Register</h1>
         <form action="register.php" method="post">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username" onBlur="username_validation();" required><span id="username_err"></span><br>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
+            <input type="text" id="password" name="password" onBlur="password_validation();" required><span id="password_err"></span><br>
             <input type="submit" name="register" value="Register"></button>
         </form>
+        <?php
+    include('includes/footer.php');
+    ?>
     </body>
 </html>

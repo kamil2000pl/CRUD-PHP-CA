@@ -79,13 +79,24 @@ if(isset($_POST['login'])){
         <title>Login</title>
     </head>
     <body>
+    <?php
+    include('includes/header.php');
+    ?>
+    <div class="container">
         <h1>Login</h1>
         <form action="login.php" method="post">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username" onBlur="username_validation();" required><span id="username_err"></span><br>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
-            <input type="submit" name="login" value="Login">
+            <input type="text" id="passwordlogin" name="password" onBlur="passwordlogin_validation();" required><span id="passwordlogin_err"></span><br>
+            <input class="submitbutton" type="submit" name="login" value="Login"><br>
         </form>
+        <?php
+    include('includes/footer.php');
+    ?>
+    </div>
     </body>
+    
 </html>
+
+<script src="validation.js"></script>

@@ -43,7 +43,7 @@ include('includes/header.php');
           id="add_category_form">
 
         <label>Name:</label>
-        <input id="category_name" type="input" name="name" onBlur="category_name_validation();">
+        <input id="category_name" type="input" name="name" onBlur="category_name_validation();" required>
         <input id="add_category_button" type="submit" value="Add">
         <span id="catname_err"></span>
     </form>
