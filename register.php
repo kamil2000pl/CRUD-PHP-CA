@@ -17,6 +17,7 @@ require 'libary-folder/password.php';
  */
 require 'login_connect.php';
 
+$successful_register = "";
 
 //If the POST var "register" exists (our submit button), then we can
 //assume that the user has submitted the registration form.
@@ -69,7 +70,10 @@ if(isset($_POST['register'])){
     $result = $stmt->execute();
     
     //If the signup process is successful.
-    
+    if($result){
+        //What you do here is up to you!
+        $successful_register = 'Thank you for registering with our website.';
+    }
     
 }
 
@@ -84,10 +88,9 @@ if(isset($_POST['register'])){
     <?php
     include('includes/header.php');
     ?>
-        <?php if($result){
-        //What you do here is up to you!
-        echo '<p>Thank you for registering with our website. Please login <a href="login.php">here</a></p>';
-    }?>
+    <?php 
+    echo $successful_register;
+    ?>
         <h1>Register</h1>
         <form action="register.php" method="post">
             <label for="username">Username</label>
@@ -101,3 +104,4 @@ if(isset($_POST['register'])){
     ?>
     </body>
 </html>
+<script src="validation.js"></script>
