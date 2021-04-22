@@ -88,20 +88,22 @@ if(isset($_POST['register'])){
     <?php
     include('includes/header.php');
     ?>
-    <?php 
-    echo $successful_register;
-    ?>
+    <div class="container">
         <h1>Register</h1>
+            <?php 
+                echo $successful_register;
+            ?>
         <form action="register.php" method="post">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" onBlur="username_validation();" required><span id="username_err"></span><br>
             <label for="password">Password</label>
             <input type="text" id="password" name="password" onBlur="password_validation();" required><span id="password_err"></span><br>
-            <input type="submit" name="register" value="Register"></button>
+            <input class="submitbutton" type="submit" name="register" value="Register"></button>
         </form>
         <?php
     include('includes/footer.php');
     ?>
+    </div>
     </body>
 </html>
 <script src="validation.js"></script>
