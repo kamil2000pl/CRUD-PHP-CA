@@ -1,6 +1,23 @@
-#login_register p a
+#login_register
 {
-    float: right;
     display: block;
     text-align: right;
+    padding-right: 14%;
+    margin: 30px 0 5px 0;
+    p {
+        display: inline-block;
+        font-family: 'Roboto', sans-serif;
+        a {
+            text-decoration: none;
+            background-color: $buttoncolor;
+            border: 3px $buttoncolor solid;
+            border-radius: 7px;;
+            padding: 10px;
+            &:hover {
+                background-color: $buttoncolorhover;
+                border: 3px $buttoncolorhover solid;
+            }
+        }
+    }
 }
+

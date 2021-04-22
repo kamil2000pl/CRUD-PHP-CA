@@ -152,7 +152,7 @@ nav ul li a:hover {
   padding: 10px;
 }
 
-.submitbutton:hover {
+.submitbutton :hover {
   background-color: #33cc33;
   border: 2px #33cc33 solid;
   cursor: pointer;
@@ -207,5 +207,30 @@ nav ul li a:hover {
 
 #category_table td {
   height: 60px;
+}
+
+#login_register {
+  display: block;
+  text-align: right;
+  padding-right: 14%;
+  margin: 30px 0 5px 0;
+}
+
+#login_register p {
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+}
+
+#login_register p a {
+  text-decoration: none;
+  background-color: #00ff99;
+  border: 3px #00ff99 solid;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+#login_register p a:hover {
+  background-color: #00cc66;
+  border: 3px #00cc66 solid;
 }
 /*# sourceMappingURL=main.css.map */

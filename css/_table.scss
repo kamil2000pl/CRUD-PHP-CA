@@ -19,12 +19,11 @@ td {
     border: 2px $deleteeditcolor solid;
     border-radius: 4px;
     padding:10px;
-}
-
-.deleteedit:hover {
-    background-color: $deleteeditcolorhover;
-    border: 2px $deleteeditcolorhover solid;
-    cursor: pointer;
+    &:hover {
+        background-color: $deleteeditcolorhover;
+        border: 2px $deleteeditcolorhover solid;
+        cursor: pointer;
+    }
 }
 
 img {

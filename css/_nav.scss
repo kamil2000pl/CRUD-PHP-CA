@@ -2,25 +2,24 @@ nav {
     width:50%;
     display: inline-block;
     margin: 20px 0;
-}
-
-nav ul li {
-    list-style-type: none;
-    display: inline-block;
-    text-decoration: none;
-    color: black;
-}
-
-nav ul li a {
-    text-decoration: none;
-    background-color: $navcolour;
-    border: 3px $navcolour solid;
-    border-radius: 7px;;
-    padding: 10px;
-    color: black;
-}
-
-nav ul li a:hover {
-    background-color: $navcolourhover;
-    border: 3px $navcolourhover solid;
+    ul {
+        li {
+            list-style-type: none;
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            a {
+                text-decoration: none;
+                background-color: $navcolour;
+                border: 3px $navcolour solid;
+                border-radius: 7px;;
+                padding: 10px;
+                color: black;
+                &:hover {
+                    background-color: $navcolourhover;
+                    border: 3px $navcolourhover solid;
+                }
+            }
+        }
+    }
 }

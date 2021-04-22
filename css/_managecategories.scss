@@ -2,12 +2,11 @@
     background-color: $deleteeditcolor;
     border: 2px $deleteeditcolor solid;
     border-radius: 4px;
-}
-
-#add_category_button:hover {
-    background-color: $deleteeditcolorhover;
-    border: 2px $deleteeditcolorhover solid;
-    cursor: pointer;
+    &:hover {
+        background-color: $deleteeditcolorhover;
+        border: 2px $deleteeditcolorhover solid;
+        cursor: pointer;
+    }
 }
 
 #delete_button {
@@ -15,14 +14,15 @@
     border: 2px $deleteeditcolor solid;
     border-radius: 4px;
     padding:10px;
+    &:hover {
+        background-color: $deleteeditcolorhover;
+        border: 2px $deleteeditcolorhover solid;
+        cursor: pointer;
+    }
 }
 
-#delete_button:hover {
-    background-color: $deleteeditcolorhover;
-    border: 2px $deleteeditcolorhover solid;
-    cursor: pointer;
-}
-
-#category_table td {
-    height: 60px;
+#category_table {
+    td {
+        height: 60px;
+    }
 }
