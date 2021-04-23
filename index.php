@@ -75,6 +75,11 @@ $statement3->closeCursor();
                     echo '<th>Switch</th>';
                 }
                 ?>
+                <?php
+                if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in']))
+                {
+                    echo '<th></th>';
+                } ?>
             </tr>
             <?php foreach ($records as $record) : ?>
                 <tr>
@@ -88,6 +93,14 @@ $statement3->closeCursor();
                         echo '</td>';
                     }
                     ?>
+                    <?php
+                    if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in']))
+                    {
+                        echo '<td>';
+                        echo '<form method="post">';
+                        echo '<input class="submitbutton" type="submit" value="Buy">';
+                        echo '</td>';
+                    } ?>
                 </tr>
             <?php endforeach; ?>
         </table>
