@@ -24,4 +24,10 @@ include('includes/header.php');
 include('includes/footer.php');
 ?>
 </div>
-<script src="validation.js"></script>
+<script language="JavaScript">
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name"); 
+frmvalidator.addValidation("email","req","Please provide your email"); 
+frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+</script>
+<!-- <script src="validation.js"></script> -->
