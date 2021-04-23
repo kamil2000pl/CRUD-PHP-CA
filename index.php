@@ -75,8 +75,6 @@ $statement3->closeCursor();
                     echo '<th>Switch</th>';
                 }
                 ?>
-                <th>Delete</th>
-                <th>Edit</th>
             </tr>
             <?php foreach ($records as $record) : ?>
                 <tr>
@@ -90,26 +88,17 @@ $statement3->closeCursor();
                         echo '</td>';
                     }
                     ?>
-                    <td>
-                        <form action="delete_record.php" method="post" id="delete_record_form">
-                            <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-                            <input class="deleteedit" type="submit" value="Delete">
-                        </form>
-                    </td>
-                    <td>
-                        <form action="edit_record_form.php" method="post" id="delete_record_form">
-                            <input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
-                            <input class="deleteedit" type="submit" value="Edit">
-                        </form>
-                    </td>
                 </tr>
             <?php endforeach; ?>
         </table>
         <div id='deleteaddbuttons'>
-            <p><a href="add_record_form.php">Add Record</a></p>
-            <p><a href="category_list.php">Manage Categories</a></p>
+            <?php
+                if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])){
+                    echo '<p><a href="manage_keyboards.php">Manage Keyboards</a></p>';
+                    echo '<p><a href="add_record_form.php">Add Record</a></p>';
+                    echo '<p><a href="category_list.php">Manage Categories</a></p>';
+                }
+            ?>
             <p><a href="contact.php">Contact Us</a></p>
         </div>
     </section>

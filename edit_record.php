@@ -1,5 +1,7 @@
 <?php
 
+
+
 // Get the record data
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);

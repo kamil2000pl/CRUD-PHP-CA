@@ -1,3 +1,9 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+?>
+
 <!-- the head section -->
 <head>
 <title>Keyboard Shop</title>
@@ -9,6 +15,13 @@
 <body>
 <header><h1><a href='index.php'>Keyboard Shop</a></h1></header>
 <div id='login_register'>
-    <p><a href="register.php">Register</a></p>
-    <p><a href="login.php">Login</a></p>
+<?php
+    if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
+        echo '<p><a href="register.php">Register</a></p>';
+        echo '<p><a href="login.php">Login</a></p>';
+    }
+    else {
+        echo '<p><a href="logout.php">Logout</a></p>';
+    }
+    ?>
 </div>
