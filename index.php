@@ -110,6 +110,7 @@ $statement3->closeCursor();
         <div id='deleteaddbuttons'>
             <p><a href="add_record_form.php">Add Record</a></p>
             <p><a href="category_list.php">Manage Categories</a></p>
+            <p><a href="contact.php">Contact Us</a></p>
         </div>
     </section>
     <?php
