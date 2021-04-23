@@ -152,7 +152,7 @@ nav ul li a:hover {
   padding: 10px;
 }
 
-.submitbutton :hover {
+.submitbutton:hover {
   background-color: #33cc33;
   border: 2px #33cc33 solid;
   cursor: pointer;

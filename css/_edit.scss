@@ -21,7 +21,7 @@
     border: 2px $deleteeditcolor solid;
     border-radius: 4px;
     padding:10px;
-    :hover {
+    &:hover {
         background-color: $deleteeditcolorhover;
         border: 2px $deleteeditcolorhover solid;
         cursor: pointer;
