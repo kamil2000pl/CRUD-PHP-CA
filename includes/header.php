@@ -22,6 +22,8 @@ if (session_status() === PHP_SESSION_NONE) {
         echo '<p><a href="login.php">Login</a></p>';
     }
     else {
+        echo '<p>Logged in as: ';
+        echo $_SESSION['username'], '</p>';
         echo '<p><a href="logout.php">Logout</a></p>';
     }
     ?>

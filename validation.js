@@ -118,3 +118,49 @@ function passwordlogin_validation() {
         document.getElementById('passwordlogin_err').innerHTML = '';
     }
 }
+
+function contactname_validation() {
+    'use strict';
+    var contactname = document.getElementById("contactname");
+    var contactname_value = document.getElementById("contactname").value;
+    var contactname_length = contactname_value.length;
+    if (contactname_length < 3 || contactname_length > 25) {
+        document.getElementById('contactname_err').innerHTML = 'Name must not be less than 3 characters and greater than 25 characters';
+        document.getElementById('contactname_err').style.color = "#FF0000";
+    }
+    else {
+        document.getElementById('contactname_err').innerHTML = 'Valid Name';
+        document.getElementById('contactname_err').style.color = "#00AF33";
+    }
+}
+
+function contactemail_validation() {
+    'use strict';
+    var emailregex = '^[^@\s]+@[^@\s]+\.[^@\s]+$';
+    var contactemail = document.getElementById("contactemail");
+    var contactemail_value = document.getElementById("contactemail").value;
+    var contactemail_length = contactemail_value.length;
+    if (contactemail_value === "" || !contactemail_value.match(emailregex)) {
+        document.getElementById('contactemail_err').innerHTML = 'Email must be valid';
+        document.getElementById('contactemail_err').style.color = "#FF0000";
+    }
+    else {
+        document.getElementById('contactemail_err').innerHTML = 'Valid Email';
+        document.getElementById('contactemail_err').style.color = "#00AF33";
+    }
+}
+
+function contactmessage_validation() {
+    'use strict';
+    var contactmessage = document.getElementById("contactmessage");
+    var contactmessage_value = document.getElementById("contactmessage").value;
+    var contactmessage_length = contactmessage_value.length;
+    if (contactmessage_length < 20 || contactmessage_length > 1000) {
+        document.getElementById('contactmessage_err').innerHTML = 'Message must not be less than 20 characters and greater than 1000 characters';
+        document.getElementById('contactmessage_err').style.color = "#FF0000";
+    }
+    else {
+        document.getElementById('contactmessage_err').innerHTML = 'Valid Message';
+        document.getElementById('contactmessage_err').style.color = "#00AF33";
+    }
+}

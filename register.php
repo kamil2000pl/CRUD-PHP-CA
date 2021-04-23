@@ -97,7 +97,7 @@ if(isset($_POST['register'])){
             <label for="username">Username</label>
             <input type="text" id="username" name="username" onBlur="username_validation();" required><span id="username_err"></span><br>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password" onBlur="password_validation();" required><span id="password_err"></span><br>
+            <input type="password" id="password" name="password" onBlur="password_validation();" required><span id="password_err"></span><br>
             <input class="submitbutton" type="submit" name="register" value="Register"></button>
         </form>
         <?php

@@ -59,6 +59,7 @@ if(isset($_POST['login'])){
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['logged_in'] = time();
             $_SESSION['access_level'] = $user['access_level'];
+            $_SESSION['username'] = $user['username'];
 
             //Redirect to our protected page, which we called home.php
             header('Location: index.php');
@@ -89,7 +90,7 @@ if(isset($_POST['login'])){
             <label for="username">Username</label>
             <input type="text" id="username" name="username" onBlur="username_validation();" required><span id="username_err"></span><br>
             <label for="password">Password</label>
-            <input type="text" id="passwordlogin" name="password" onBlur="passwordlogin_validation();" required><span id="passwordlogin_err"></span><br>
+            <input type="password" id="passwordlogin" name="password" onBlur="passwordlogin_validation();" required><span id="passwordlogin_err"></span><br>
             <input class="submitbutton" type="submit" name="login" value="Login"><br>
         </form>
         <?php

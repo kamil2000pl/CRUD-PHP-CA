@@ -223,6 +223,7 @@ nav ul li a:hover {
 #login_register p {
   display: inline-block;
   font-family: 'Roboto', sans-serif;
+  padding: 0 10px 0 0;
 }
 
 #login_register p a {

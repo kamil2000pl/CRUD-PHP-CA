@@ -93,16 +93,20 @@ $statement3->closeCursor();
         </table>
         <div id='deleteaddbuttons'>
             <?php
-                if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in']) || $_SESSION['access_level'] != 1){
-                    echo '<p><a href="manage_keyboards.php">Manage Keyboards</a></p>';
-                    echo ' ';
-                    echo '<p><a href="add_record_form.php">Add Record</a></p>';
-                    echo ' ';
-                    echo '<p><a href="category_list.php">Manage Categories</a></p>';
-                    echo ' ';
-                    echo '<p><a href="display_users.php">User List</a></p>';
-                    echo ' ';
-                }
+                if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in']))
+                {
+                    if($_SESSION['access_level'] == 1)
+                    {
+                        echo '<p><a href="manage_keyboards.php">Manage Keyboards</a></p>';
+                        echo ' ';
+                        echo '<p><a href="add_record_form.php">Add Record</a></p>';
+                        echo ' ';
+                        echo '<p><a href="category_list.php">Manage Categories</a></p>';
+                        echo ' ';
+                        echo '<p><a href="display_users.php">User List</a></p>';
+                        echo ' ';
+                    }
+            }
             ?>
             <p><a href="contact.php">Contact Us</a></p>
         </div>

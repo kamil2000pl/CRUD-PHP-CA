@@ -1,4 +1,26 @@
 <?php
+
+/**
+ * Start the session.
+ */
+session_start();
+
+/**
+ * Check if the user is logged in.
+ */
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in']) || $_SESSION['access_level'] != 1){
+    //User not logged in. Redirect them back to the login.php page.
+    header('Location: login.php');
+    exit;
+}
+
+
+/**
+ * Print out something that only logged in users can see.
+ */
+
+// echo 'Congratulations! You are logged in!';
+
 require_once('database.php');
 
 // Get users
@@ -46,6 +68,11 @@ $statement->closeCursor();
                 </tr>
             <?php endforeach; ?>
         </table>
+        <div id='deleteaddbuttons'>
+            <p><a href="manage_keyboards.php">Manage Keyboards</a></p>
+            <p><a href="category_list.php">Manage Categories</a></p>
+            <p><a href="contact.php">Contact Us</a></p>
+        </div>
 
 <?php
     include('includes/footer.php');
