@@ -59,7 +59,7 @@ include('includes/header.php');
                                    <label>Name:</label>
                             </div>
                             <div class='col-75'>
-                                   <input type="input" name="name" id="name" onBlur="name_validation();" value="<?php echo $records['name']; ?> required"><span id="name_err"></span>
+                                   <input type="input" name="name" id="name" onBlur="name_validation();" value="<?php echo $records['name']; ?>" required><span id="name_err"></span>
                             </div>
                             <br>
                      </div>
@@ -69,7 +69,7 @@ include('includes/header.php');
                                    <label>List Price:</label>
                             </div>
                             <div class='col-75'>
-                                   <input type="input" name="price" id="price" onBlur="price_validation();" value="<?php echo $records['price']; ?> required"><span id="price_err"></span>
+                                   <input type="input" name="price" id="price" onBlur="price_validation();" value="<?php echo $records['price']; ?>" required><span id="price_err"></span>
                             </div>
                             <br>
                      </div>
