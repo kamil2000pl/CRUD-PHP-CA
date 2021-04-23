@@ -18,6 +18,7 @@ if (session_status() === PHP_SESSION_NONE) {
 <?php
     if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
         echo '<p><a href="register.php">Register</a></p>';
+        echo ' ';
         echo '<p><a href="login.php">Login</a></p>';
     }
     else {

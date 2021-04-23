@@ -95,8 +95,11 @@ $statement3->closeCursor();
             <?php
                 if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])){
                     echo '<p><a href="manage_keyboards.php">Manage Keyboards</a></p>';
+                    echo ' ';
                     echo '<p><a href="add_record_form.php">Add Record</a></p>';
+                    echo ' ';
                     echo '<p><a href="category_list.php">Manage Categories</a></p>';
+                    echo ' ';
                 }
             ?>
             <p><a href="contact.php">Contact Us</a></p>
