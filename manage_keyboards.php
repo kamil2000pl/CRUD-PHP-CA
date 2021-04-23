@@ -8,7 +8,7 @@ session_start();
 /**
  * Check if the user is logged in.
  */
-if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in']) || $_SESSION['access_level'] != 1){
     //User not logged in. Redirect them back to the login.php page.
     header('Location: login.php');
     exit;
@@ -132,6 +132,7 @@ $statement3->closeCursor();
         <div id='deleteaddbuttons'>
             <p><a href="add_record_form.php">Add Record</a></p>
             <p><a href="category_list.php">Manage Categories</a></p>
+            <p><a href="display_users.php">User List</a></p>
             <p><a href="contact.php">Contact Us</a></p>
         </div>
     </section>
