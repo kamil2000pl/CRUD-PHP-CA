@@ -79,6 +79,10 @@ img {
   width: 30%;
 }
 
+.userstable {
+  height: 40px;
+}
+
 nav {
   width: 50%;
   display: inline-block;
